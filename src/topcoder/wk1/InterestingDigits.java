@@ -1,4 +1,4 @@
-package topcoder;
+package topcoder.wk1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
