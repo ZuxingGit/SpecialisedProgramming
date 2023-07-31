@@ -2,7 +2,7 @@ package leetcode.wk1;
 
 public class PalindromeNumber {
     public static void main(String[] args) {
-        System.out.println(isPalindrome(0));
+        System.out.println(isPalindrome(2310132));
     }
 
     /**
