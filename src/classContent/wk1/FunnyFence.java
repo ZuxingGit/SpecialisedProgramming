@@ -1,4 +1,4 @@
-package wk1;
+package classContent.wk1;
 
 public class FunnyFence {
     public static void main(String[] args) {

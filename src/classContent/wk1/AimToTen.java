@@ -1,4 +1,4 @@
-package wk1;
+package classContent.wk1;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
