@@ -28,7 +28,7 @@ public class FindAllAnagramsInAString {
                 String subStr = s.substring(i, i + pSize);
                 char[] charSub = subStr.toCharArray();
                 Arrays.sort(charSub);
-                if (Arrays.equals(charP,charSub))
+                if (Arrays.equals(charP, charSub))
                     list.add(i);
             }
         }
