@@ -3,6 +3,9 @@ package leetcode.wk1;
 public class Roman2Integer {
     public static void main(String[] args) {
         System.out.println(romanToInt("III"));
+        System.out.println(romanToInt("LVIII"));
+        System.out.println(romanToInt("XIV"));
+        System.out.println(romanToInt("MMCDLXXVIII"));
     }
 
     public static int romanToInt(String s) {
