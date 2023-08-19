@@ -1,7 +1,5 @@
 package classContent.wk4;
 
-import com.sun.deploy.util.ArrayUtil;
-
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -15,7 +13,6 @@ public class NumberOfStudentsUnable2EatLunch {
 
     public static int countStudents(int[] students, int[] sandwiches) {
         List<Integer> studentList = Arrays.stream(students).boxed().collect(Collectors.toList());
-//        Queue<Object> studentQueue = new LinkedList<>(Arrays.asList(students));
         List<Integer> foodList = Arrays.stream(sandwiches).boxed().collect(Collectors.toList());
         int count = 0;
         while (!studentList.isEmpty() && count <= studentList.size()) {
