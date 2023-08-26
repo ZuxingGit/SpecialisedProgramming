@@ -8,8 +8,14 @@ public class InvertBinaryTree {
         tree1.printTree();
         invertTree(tree1);
         tree1.printTree();
+        
+        tree2.printTree();
         invertTree(tree2);
+        tree2.printTree();
+        
+        tree3.printTree();
         invertTree(tree3);
+        tree3.printTree();
     }
 
     public static TreeNode invertTree(TreeNode root) {
@@ -32,7 +38,7 @@ public class InvertBinaryTree {
             }
             root.right = nodeTmp;
         }
-
+        
         return root;
     }
 }

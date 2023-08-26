@@ -22,7 +22,7 @@ public class TreeNode {
     }
 
     public void printTree() {
-        TreeNode root=this;
+        TreeNode root = this;
         final int m = maxHeight(root);
         final int n = (int) Math.pow(2, m) - 1;
         List<List<String>> ans = new ArrayList<>();
@@ -35,11 +35,11 @@ public class TreeNode {
             ans.add(new ArrayList<>(row));
 
         dfs(root, 0, 0, n - 1, ans);
-        StringBuilder sb= new StringBuilder();
-        for (List<String> r: ans
-             ) {
-            for (String e:r
-                 ) {
+        StringBuilder sb = new StringBuilder();
+        for (List<String> r : ans
+        ) {
+            for (String e : r
+            ) {
                 if (e.isEmpty())
                     sb.append(" ");
                 else
@@ -50,12 +50,25 @@ public class TreeNode {
         System.out.println(sb.toString());
     }
 
+    /**
+     * get the tree's number of height
+     * @param root
+     * @return
+     */
     private int maxHeight(TreeNode root) {
         if (root == null)
             return 0;
         return 1 + Math.max(maxHeight(root.left), maxHeight(root.right));
     }
 
+    /**
+     * Depth First Search
+     * @param root
+     * @param row
+     * @param left
+     * @param right
+     * @param ans
+     */
     private void dfs(TreeNode root, int row, int left, int right, List<List<String>> ans) {
         if (root == null)
             return;
