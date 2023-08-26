@@ -1,4 +1,4 @@
-package classContent.wk5.sameTree;
+package classContent.wk5.Tree;
 
 public class SameTree {
     public static void main(String[] args) {

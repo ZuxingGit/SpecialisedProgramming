@@ -1,4 +1,4 @@
-package classContent.wk5.sameTree;
+package classContent.wk5.Tree;
 
 import java.util.ArrayList;
 import java.util.List;

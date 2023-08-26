@@ -1,4 +1,4 @@
-package classContent.wk5.sameTree;
+package classContent.wk5.Tree;
 
 public class BalancedBinaryTree {
     public static void main(String[] args) {
