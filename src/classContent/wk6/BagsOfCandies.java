@@ -28,11 +28,11 @@ public class BagsOfCandies {
             return myTurn ? bags[left] : -bags[left];
 
         if (myTurn) {
-            return Math.max(getMaxGain(false, left + 1, right, bags)+bags[left], 
-                    getMaxGain(false, left, right - 1, bags)+bags[right]);
+            return Math.max(getMaxGain(false, left + 1, right, bags) + bags[left],
+                    getMaxGain(false, left, right - 1, bags) + bags[right]);
         } else {
-            return Math.min(getMaxGain(true, left + 1, right, bags)-bags[left], 
-                    getMaxGain(true, left, right - 1, bags)-bags[right]);
+            return Math.min(getMaxGain(true, left + 1, right, bags) - bags[left],
+                    getMaxGain(true, left, right - 1, bags) - bags[right]);
         }
     }
 }
