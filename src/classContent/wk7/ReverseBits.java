@@ -4,16 +4,10 @@ public class ReverseBits {
     public static void main(String[] args) {
 //        String n1 = "00000010100101000001111010011100";
 //        String n2 = "11111111111111111111111111111101";
-        String n3 = "11111111111111111111111111111111";
-        int i1 = 964176192;
-//        int i2= 3221225471;
-        System.out.println(Integer.MAX_VALUE);
-        System.out.println(decimalToBinary(Integer.MAX_VALUE));
-        System.out.println(decimalToBinary((int) (Math.pow(2,31)-1)));
-        System.out.println(decimalToBinary((int) (Math.pow(2,32)-1)));
-        System.out.println(decimalToBinary((int) (Math.pow(2,32)-Math.pow(2,31))).length());
-//        System.out.println(decimalToBinary((Math.pow(2,32)-Math.pow(2,31))));
-        System.out.println(decimalToBinary((int) (Math.pow(2,31)-Math.pow(2,30))));
+        int num1=43261596;
+//        Integer num2=4294967293;
+        System.out.println(reverseBits(num1));
+//        System.out.println();
 
 
     }
