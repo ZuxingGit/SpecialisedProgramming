@@ -33,7 +33,7 @@ public class DiceOperation {
                 results[i]=combine;
                 
             }
-            //            ^
+            //            
             
         } else {
             
