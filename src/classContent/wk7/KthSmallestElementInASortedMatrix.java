@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class KthSmallestElementInASortedMatrix {
     public static void main(String[] args) {
@@ -16,6 +17,33 @@ public class KthSmallestElementInASortedMatrix {
     }
 
     public static int kthSmallest(int[][] matrix, int k) {
+        /*List<List<Integer>> matrixList = new ArrayList<>();
+        int size = matrix.length;
+        for (int[] array : matrix
+        ) {
+            matrixList.add(Arrays.stream(array).boxed().collect(Collectors.toList()));
+        }
+        int i = 0;
+        int min = matrix[0][0];
+        while (i < k) {
+            int index = 0;
+            while (index < size - 1 && matrixList.get(index).size() == 0) {
+                index++;
+            }
+            min = matrixList.get(index).get(0);
+            for (int j = 0; j < size; j++) {
+                List<Integer> l = matrixList.get(j);
+                if (l != null && l.size() > 0) {
+                    if (l.get(0) < min) {
+                        min = l.get(0);
+                        index = j;
+                    }
+                }
+            }
+            matrixList.get(index).remove(0);
+            i++;
+        }
+        return min;*/
         int size = matrix.length;
         List<Integer> oneArrayList = new ArrayList<>();
 
