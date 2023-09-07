@@ -1,10 +1,5 @@
 package classContent.wk7;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Stack;
-
 public class LongestIncreasingSubsequence {
     public static void main(String[] args) {
         int[] a1 = {10, 9, 2, 5, 3, 7, 101, 18};
