@@ -55,7 +55,7 @@ public class TreeNode {
      * @param root
      * @return
      */
-    private int maxHeight(TreeNode root) {
+    private static int maxHeight(TreeNode root) {
         if (root == null)
             return 0;
         return 1 + Math.max(maxHeight(root.left), maxHeight(root.right));
@@ -69,7 +69,7 @@ public class TreeNode {
      * @param right
      * @param ans
      */
-    private void dfs(TreeNode root, int row, int left, int right, List<List<String>> ans) {
+    private static void dfs(TreeNode root, int row, int left, int right, List<List<String>> ans) {
         if (root == null)
             return;
 
