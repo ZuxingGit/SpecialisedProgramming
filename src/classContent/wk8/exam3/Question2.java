@@ -11,6 +11,8 @@ public class Question2 {
         int[] mul3 = {-160, -312, -983};
         int[] nums4 = {985, -682, 839, -81, -206, -905, 668, 577, 999, 929, -763, -852, 631, 118, 990, 1, -251, -354, 57, -491, -725, -786, 514, -968, 142};
         int[] mul4 = {-771, -131, 290, 796, 906, -751, -355, 889, -981, 692, 642, -543, -270, -372, -778};
+        int[] n5 = {940, 64, 733, 177, -181, -397, -728, -829, -499, 984};
+        int[] m5 = {-623, -699, 666, -295};
         int[] nums5 = {667, 407};
         int[] mul5 = {562};
         int[] nums6 = {651, 610};
@@ -21,6 +23,7 @@ public class Question2 {
         System.out.println("case " + i++ + ": " + maxScore(nums2, mul2));
         System.out.println("case " + i++ + ": " + maxScore(nums3, mul3));
         System.out.println("case " + i++ + ": " + maxScore(nums4, mul4));
+        System.out.println("case " + i++ + ": " + maxScore(n5, m5));
         System.out.println("case " + i++ + ": " + maxScore(nums5, mul5));
         System.out.println("case " + i++ + ": " + maxScore(nums6, mul6));
         System.out.println("case " + i++ + ": " + maxScore(nums7, mul7));
@@ -37,20 +40,18 @@ public class Question2 {
             }
         }
 
-        return maxScoreDP(nums, mul, 0, len1 - 1, 0, len2 - 1, allProducts);
+        return maxScoreDP(0, len1 - 1, 0, len2 - 1, allProducts);
     }
 
     /**
-     * @param nums
-     * @param mul
-     * @param l1   left index of nums
-     * @param r1   right index of nums
-     * @param l2   left index of mul
-     * @param r2   right index of mul
-     * @param all  prepared products of multiply
+     * @param l1  left index of nums
+     * @param r1  right index of nums
+     * @param l2  left index of mul
+     * @param r2  right index of mul
+     * @param all prepared products of multiply
      * @return
      */
-    public static int maxScoreDP(int[] nums, int[] mul, int l1, int r1, int l2, int r2, int[][] all) {
+    public static int maxScoreDP(int l1, int r1, int l2, int r2, int[][] all) {
         if (l1 == r1) {
             return Math.max(all[l1][l2], all[l1][r2]);
         }
@@ -58,10 +59,9 @@ public class Question2 {
             return Math.max(all[l1][l2], all[r1][l2]);
         }
         return Math.max(
-                Math.max(all[l1][l2] + maxScoreDP(nums, mul, l1 + 1, r1, l2 + 1, r2, all),
-                        all[l1][r2] + maxScoreDP(nums, mul, l1 + 1, r1, l2, r2 - 1, all)),
-                Math.max(all[r1][l2] + maxScoreDP(nums, mul, l1, r1 - 1, l2 + 1, r2, all),
-                        all[r1][r2] + maxScoreDP(nums, mul, l1, r1 - 1, l2, r2 - 1, all)));
+                all[l1][l2] + maxScoreDP(l1 + 1, r1, l2 + 1, r2, all),
+                all[r1][l2] + maxScoreDP(l1, r1 - 1, l2 + 1, r2, all)
+                );
 
     }
 }
