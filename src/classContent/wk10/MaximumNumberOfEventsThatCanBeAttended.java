@@ -13,8 +13,8 @@ public class MaximumNumberOfEventsThatCanBeAttended {
         int[][] et5 = {{1, 1}, {26, 27}, {17, 17}, {1, 2}, {4, 7}, {16, 16}, {20, 23}, {8, 9}, {17, 19}, {4, 4}, {15, 15}, {23, 27}, {28, 31}, {25, 26}, {25, 29}, {30, 33}};
         int[][] et6 = {{27, 29}, {28, 32}, {3, 3}, {24, 25}, {7, 7}, {22, 25}, {14, 15}, {13, 17}, {1, 2}, {7, 7}, {10, 12}, {9, 13}, {21, 25}, {20, 21}, {20, 22}, {19, 20}, {27, 28}, {9, 9}, {21, 24}, {18, 21}, {6, 10}, {29, 30}, {22, 24}};
 
-//        System.out.println(maxEvents(et1));
-//        System.out.println(maxEvents(et2));
+        System.out.println(maxEvents(et1));
+        System.out.println(maxEvents(et2));
         System.out.println(maxEvents(et3));
         System.out.println(maxEvents(et4));
         System.out.println(maxEvents(et5));
