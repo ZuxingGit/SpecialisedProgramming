@@ -9,8 +9,8 @@ public class PacificAtlanticWaterFlow {
     public static void main(String[] args) {
         int[][] a1 = {{1, 2, 2, 3, 5}, {3, 2, 3, 4, 4}, {2, 4, 5, 3, 1}, {6, 7, 1, 4, 5}, {5, 1, 1, 2, 4}};
         int[][] a2 = {{1}};
-        pacificAtlantic(a1);
-        pacificAtlantic(a2);
+        System.out.println(pacificAtlantic(a1));
+        System.out.println(pacificAtlantic(a2));
     }
 
     static int[][] dir = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
