@@ -1,11 +1,13 @@
 package classContent.wk9;
 
+import java.util.Arrays;
+
 public class SortAnArray {
     public static void main(String[] args) {
         int[] nums1 = {5, 2, 3, 1};
         int[] nums2 = {5, 1, 1, 2, 0, 0};
-        System.out.println(sortArray(nums1).toString());
-        System.out.println(sortArray(nums2));
+        System.out.println(Arrays.toString(sortArray(nums1)));
+        System.out.println(Arrays.toString(sortArray(nums2)));
     }
 
     public static int[] sortArray(int[] nums) {
