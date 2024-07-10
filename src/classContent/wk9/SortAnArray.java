@@ -4,23 +4,22 @@ import java.util.Arrays;
 
 public class SortAnArray {
     public static void main(String[] args) {
-        int[] nums1 = {5, 2, 3, 1};
-        int[] nums2 = {5, 1, 1, 2, 0, 0};
-        System.out.println(Arrays.toString(sortArray(nums1)));
-        System.out.println(Arrays.toString(sortArray(nums2)));
+        Integer[] nums1 = {5, 2, 3, 1};
+        Integer[] nums2 = {5, 1, 1, 2, 0, 0};
+        System.out.println(Arrays.toString(sort(nums1, 4)));
+        System.out.println(Arrays.toString(sort(nums2, 6)));
     }
 
-    public static int[] sortArray(int[] nums) {
-        int length = nums.length;
+    public static Integer[] sort(Integer[] nums, Integer length) {
         mergeSort(nums, 0, length - 1);
         return nums;
     }
 
-    public static void merge(int[] nums, int l, int m, int r) {
+    public static void merge(Integer[] nums, int l, int m, int r) {
         int size1 = m - l + 1;
         int size2 = r - m;
-        int[] leftPart = new int[size1];
-        int[] rightPart = new int[size2];
+        Integer[] leftPart = new Integer[size1];
+        Integer[] rightPart = new Integer[size2];
         for (int i = 0; i < size1; i++) {
             leftPart[i] = nums[l + i];
         }
@@ -36,7 +35,7 @@ public class SortAnArray {
         }
     }
 
-    public static void mergeSort(int[] nums, int l, int r) {
+    public static void mergeSort(Integer[] nums, int l, int r) {
         if (l < r) {
             int m = (r - l) / 2 + l;
             mergeSort(nums, l, m);
