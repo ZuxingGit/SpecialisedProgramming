@@ -19,3 +19,6 @@ print(sol.hammingWeight(n)) # 1
 
 n = 2147483645
 print(sol.hammingWeight(n)) # 30
+
+n = 5
+print(sol.hammingWeight(n)) # 1
