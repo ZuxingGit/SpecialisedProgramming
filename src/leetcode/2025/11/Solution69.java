@@ -31,5 +31,9 @@ public class Solution69 {
         int x3 = 2;
         int result3 = solution.mySqrt(x3);
         System.out.println("Result: " + result3); // Output: 1
+
+        int x4 = 3;
+        int result4 = solution.mySqrt(x4);
+        System.out.println("Result: " + result4); // Output: 1
     }
 }
