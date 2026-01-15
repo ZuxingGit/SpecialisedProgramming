@@ -5,7 +5,7 @@ public class Solution495 {
             if (i == 0 || timeSeries[i] >= timeSeries[i - 1] + duration) {
                 total += duration;
             } else {
-                total += timeSeries[i] + duration - (timeSeries[i - 1] + duration);
+                total += timeSeries[i] - timeSeries[i - 1];
             }
         }
         return total;
