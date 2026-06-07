@@ -7,7 +7,7 @@ public class Solution1009 {
         while (mask <= n) {
             mask <<= 1;
         }
-        return ~n & (mask - 1);
+        return n ^ (mask - 1);
     }
 
     public static void main(String[] args) {
